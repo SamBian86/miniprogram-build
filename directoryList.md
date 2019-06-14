@@ -1,19 +1,10 @@
-#小程序开发构建工具
-
-此工具主要用于各类小程序的压缩,请自行创建src目录,先将微信开发者工具初始化小程序项目的目录指向src目录
-执行```gulp dev```
-然后在将目录指向dist目录,此时在src目录中开发保存会将最新改动的代码进行差量编译到dist对应的目录中。
-
-###目录说明
-<pre>
 |-- github
     |-- README.md
     |-- directoryList.md
     |-- gulpfile.js
     |-- package-lock.json
     |-- package.json
-    |-- dist                        // 小程序编译代码
-    |-- src                         // 小程序源码
+    |-- src
     |   |-- app.js
     |   |-- app.json
     |   |-- app.wxss
@@ -45,4 +36,3 @@
             |-- script.js
             |-- style.js
             |-- templete.js
-</pre>
