@@ -1,0 +1,33 @@
+{
+  "name": "gulp-weixin",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "sambian",
+  "license": "ISC",
+  "appType": "wechat",
+  "devDependencies": {
+    "babel-core": "^6.26.3",
+    "babel-preset-es2015": "^6.24.1",
+    "babel-preset-stage-0": "^6.24.1",
+    "del": "^4.1.1",
+    "gulp": "^4.0.2",
+    "gulp-babel": "^6.1.3",
+    "gulp-changed": "^4.0.0",
+    "gulp-htmlmin": "^5.0.1",
+    "gulp-imagemin": "^6.0.0",
+    "gulp-json-minify": "^1.2.2",
+    "gulp-load-plugins": "^1.6.0",
+    "gulp-rename": "^1.4.0",
+    "gulp-sass": "^4.0.2",
+    "gulp-uglify": "^3.0.2",
+    "jpegtran-bin": "^4.0.0",
+    "node-sass": "^4.12.0",
+    "optipng-bin": "^6.0.0",
+    "vinyl-paths": "^3.0.0"
+  },
+  "dependencies": {}
+}
