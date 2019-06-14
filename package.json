@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "mddir": "mddir"
   },
   "author": "sambian",
   "license": "ISC",
@@ -25,6 +26,7 @@
     "gulp-sass": "^4.0.2",
     "gulp-uglify": "^3.0.2",
     "jpegtran-bin": "^4.0.0",
+    "mddir": "^1.1.1",
     "node-sass": "^4.12.0",
     "optipng-bin": "^6.0.0",
     "vinyl-paths": "^3.0.0"

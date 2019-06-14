@@ -2,7 +2,7 @@ module.exports = function(gulp, common) {
   const { src, dest, task, series, parallel, watch } = gulp;
 
   function markdown(cb) {
-    common.plugins.exec(`mddir ${common.config.gulpRoot}`, function(err, stdout, stderr){
+    common.plugins.exec(`npm run mddir ${common.config.gulpRoot}`, function(err, stdout, stderr){
       if(err) {
         common.utils.console.failed(`生成markdown文件失败`)
         cb(err);
