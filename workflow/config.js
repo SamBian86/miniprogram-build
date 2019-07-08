@@ -17,15 +17,13 @@ const wechatConfig = {
   cssName: '.wxss'
 }
 
-const dingTalkConfig = {
-}
+const dingTalkConfig = {}
 
-const alipayConfig = {
-}
+const alipayConfig = {}
 
-const mergeObj = [commonConfig, wechatConfig, alipayConfig];
+const mergeObj = [commonConfig, wechatConfig, alipayConfig]
 mergeObj.map(item => {
-  Object.assign(item, commonConfig);
+  Object.assign(item, commonConfig)
 })
 
 module.exports = {
