@@ -1,0 +1,25 @@
+/* component_input 组件区域 */
+.component_input_container {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  background: #fff;
+  height: 100rpx;
+  border-bottom: 2rpx solid #f1f1f1;
+  padding: 0 30rpx;
+}
+
+.component_input_container_last {
+  border-bottom: none;
+}
+
+/* component_input 默认样式 */
+.component_input {
+  flex: 1;
+  color: #000;
+}
+
+.input_placeholder {
+  color: #999;
+}

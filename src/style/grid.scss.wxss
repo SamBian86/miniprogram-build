@@ -1,0 +1,54 @@
+.component_grid_three_columns {
+  display: grid;
+  grid-template-columns: 250rpx 250rpx 250rpx;
+}
+
+.component_grid_three_item {
+  justify-self: center;
+  align-self: center;
+  padding: 10rpx 0rpx;
+}
+
+.component_grid_three_image {
+  width: 150rpx;
+  height: 150rpx;
+}
+
+.component_grid_three_content {
+  text-align: center;
+}
+
+.component_grid_three_text {
+  color: #666;
+  font-size: 30rpx;
+}
+
+/* config */
+.component_flex_three_columns {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 20rpx 0;
+  background: #fff;
+}
+
+.component_flex_three_item {
+  width: 33%;
+  justify-self: center;
+  align-self: center;
+  padding: 10rpx 0rpx;
+}
+
+.component_flex_three_image_box {
+  text-align: center;
+}
+
+.component_flex_three_content {
+  text-align: center;
+}
+
+.component_flex_three_text {
+  color: #666;
+  font-size: 26rpx;
+}

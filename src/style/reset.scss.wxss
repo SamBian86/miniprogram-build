@@ -1,0 +1,11 @@
+page {
+  font-size: 30rpx;
+}
+
+view {
+  font-size: 30rpx;
+}
+
+text {
+  font-size: 30rpx;
+}

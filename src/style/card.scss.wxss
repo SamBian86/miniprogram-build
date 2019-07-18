@@ -1,0 +1,83 @@
+/* 标题 */
+.component_card_title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 20rpx;
+}
+
+.component_card_title_text {
+  flex: 1;
+  font-size: 36rpx;
+  font-weight: bold;
+  color: #000;
+}
+
+.component_card_title_tips {
+  flex: 1;
+  font-size: 26rpx;
+  color: #333;
+  text-align: right;
+}
+
+.component_card_items {
+  display: grid;
+  grid-template-columns: 327rpx 327rpx;
+}
+
+.component_card_item_left {
+  position: relative;
+  height: 400rpx;
+  display: flex;
+  justify-content: flex-start;
+  margin-bottom: 20rpx;
+}
+
+.component_card_item_right {
+  position: relative;
+  height: 400rpx;
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 20rpx;
+}
+
+.component_card_image_item {
+  position: absolute;
+  top: 0;
+  z-index: 100;
+}
+
+.component_card_image {
+  width: 312rpx;
+  height: 400rpx;
+  border-radius: 10rpx;
+}
+
+.component_card_image_text_item {
+  width: 312rpx;
+  position: absolute;
+  bottom: 20rpx;
+  z-index: 999;
+}
+
+.component_card_image_text_title {
+  padding: 0 20rpx;
+  height: 40rpx;
+  overflow: hidden;
+}
+.component_card_image_text_title_text {
+  font-size: 32rpx;
+  font-weight: bold;
+  color: #fff;
+}
+
+.component_card_image_text_desc {
+  padding: 0 20rpx;
+  height: 40rpx;
+  overflow: hidden;
+}
+.component_card_image_text_desc_text {
+  bottom: 20rpx;
+  font-size: 24rpx;
+  color: #fff;
+}

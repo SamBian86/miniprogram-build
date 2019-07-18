@@ -1,0 +1,73 @@
+/* component_button 组件区域 */
+.component_button_container {
+  text-align: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  transition: all 1s;
+  margin: 0 auto;
+}
+
+.component_button_big {
+  height: 80rpx;
+  border-radius: 40rpx;
+  background: #ff5b4f;
+  color: #fff;
+  font-size: 32rpx;
+}
+
+.component_button_small {
+  padding: 5rpx 10rpx;
+  border-radius: 20rpx;
+  background: #ff5b4f;
+  color: #fff;
+  font-size: 30rpx;
+}
+
+.component_button_code {
+  padding: 5rpx 10rpx;
+  border-radius: 20rpx;
+  background: #ff5b4f;
+  color: #fff;
+  font-size: 30rpx;
+}
+
+.component_button_address {
+  display: inline-block;
+  padding: 5rpx 10rpx;
+  border-radius: 20rpx;
+  background: #ddd;
+  color: #000;
+  font-size: 30rpx;
+}
+
+.component_button_timing {
+  padding: 5rpx 10rpx;
+  border-radius: 20rpx;
+  background: #ff5b4f;
+  color: #fff;
+  font-size: 30rpx;
+}
+
+.component_button_loading {
+  width: 80rpx;
+}
+
+.button_hover_class {
+  background: #ff9d96;
+}
+
+.address_area {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 0rpx 10rpx;
+}
+
+.address_icon {
+  width: 30rpx;
+  height: 30rpx;
+  margin-right: 10rpx;
+}
