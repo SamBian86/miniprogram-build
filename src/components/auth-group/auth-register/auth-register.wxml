@@ -1,0 +1,27 @@
+<!-- components/auth-group/auth-register/auth-register.wxml -->
+<view class="auth_container">
+  <view class="auth_title">
+    <view class="auth_title_text">加入耘林，乐享生活</view>
+    <view class="auth_title_login" bindtap="goBack">登录</view>
+  </view>
+  <view class="auth_form">
+    <component-input d-name="mobile_String" bind:initdata="initData" bind:keyinput="keyInput" type="number" placeholder="请输入手机号"></component-input>
+    <component-input d-name="vcode_String" bind:initdata="initData" bind:keyinput="keyInput" type="number" placeholder="验证码">
+      <view class="auth_code" slot="append">
+        <component-button type="code" mobile="{{form.mobile}}" sms-type="1"></component-button>
+      </view>
+    </component-input>
+    <component-input d-name="password_String" bind:initdata="initData" bind:keyinput="keyInput" last="true" placeholder="请输入6-12位数字或字母" password="{{!passType ? true : false}}">
+      <view class="auth_icon" bindtap="togglePassType" slot="append">
+        <image class="auth_lock" wx:if="{{!passType}}" src="../../../images/auth_password_hide.png"></image>
+        <image class="auth_lock" wx:if="{{passType}}" src="../../../images/auth_password_show.png"></image>
+      </view>
+    </component-input>
+    <!-- <component-input d-name="repassword_String" bind:initdata="initData" bind:keyinput="keyInput" last="true" placeholder="确认密码" password="true"></component-input> -->
+  </view>
+  <component-button size="big" bind:tapevent="tapEvent">注册</component-button>
+  <view class="auth_copyright">
+    <text class="auth_copyright_normal">注册代表您同意</text>
+    <text class="auth_copyright_warning" bindtap="goPrivacy">《用户协议和隐私政策》</text>
+  </view>
+</view>

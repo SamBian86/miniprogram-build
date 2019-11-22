@@ -1,7 +1,4 @@
 /* 登录 注册 忘记密码页面样式 */
-page {
-  background: #fafafa;
-}
 
 /* 认证页面容器 */
 .auth_container {
@@ -39,6 +36,21 @@ page {
   align-self: flex-end;
 }
 
+/* 切换登录方式 */
+.auth_submit_area {
+  width: calc(100vw - 64rpx);
+}
+
+.auth_submit {
+  width: calc((100vw - 64rpx) * 2);
+  display: flex;
+  transition: all 0.5s;
+}
+
+.auth_submit.auth_submit_switch {
+  transform: translateX(-50%);
+}
+
 /* icon样式 */
 .auth_icon {
   display: flex;
@@ -51,14 +63,14 @@ page {
 
 /* 手机号icon样式 */
 .auth_mobile {
-  width: 40rpx;
-  height: 40rpx;
+  width: 30rpx;
+  height: 30rpx;
 }
 
 /* 密码icon样式 */
 .auth_lock {
   width: 40rpx;
-  height: 40rpx;
+  height: 28rpx;
 }
 
 /* 忘记密码 */
@@ -82,4 +94,110 @@ page {
 /* 验证码区域样式 */
 .auth_code {
   padding-left: 30rpx;
+}
+
+/* 登录页面底部样式 */
+.auth_bottom {
+  width: calc(100vw - 64rpx);
+  position: absolute;
+  bottom: 50rpx;
+  line-height: 50rpx;
+  display: flex;
+  box-sizing: border-box;
+}
+
+.auth_bottom_forget {
+  flex: 1;
+  padding: 0 20rpx;
+  text-align: right;
+  box-sizing: border-box;
+  border-right: 2rpx solid #666;
+  display: block;
+}
+
+.auth_bottom_code {
+  flex: 1;
+  padding: 0 20rpx;
+  box-sizing: border-box;
+}
+
+.auth_bottom_pass {
+  flex: 1;
+  padding: 0 20rpx;
+  box-sizing: border-box;
+  text-align: center;
+  display: none;
+}
+
+.auth_bottom {
+  color: #666;
+}
+
+.auth_bottom.auth_bottom_switch .auth_bottom_forget {
+  display: none;
+}
+
+.auth_bottom.auth_bottom_switch .auth_bottom_code {
+  display: none;
+}
+
+.auth_bottom.auth_bottom_switch .auth_bottom_pass {
+  display: block;
+}
+
+.auth_copyright {
+  margin-top: 30rpx;
+  text-align: center;
+}
+
+.auth_copyright_normal {
+  color: #666;
+  font-size: 28rpx;
+}
+
+.auth_copyright_warning {
+  color: red;
+  font-size: 28rpx;
+}
+
+/* 其他登录方式 */
+.other_login_title {
+  height: 50rpx;
+  line-height: 50rpx;
+  padding: 0 20rpx;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: -25rpx;
+  background: #fafafa;
+  font-size: 28rpx;
+  color: #999;
+}
+
+.other_login {
+  width: calc(100vw - 64rpx);
+  position: absolute;
+  bottom: 100rpx;
+  display: flex;
+  box-sizing: border-box;
+  border-top: 2rpx solid #e3e3e3;
+  padding-top: 25rpx;
+  height: 160rpx;
+  align-items: center;
+  justify-content: center;
+}
+
+.login_type {
+  padding: 0;
+  width: 80rpx;
+  height: 80rpx;
+}
+
+.login_type::after {
+  border: none;
+}
+
+.wechat_icon {
+  width: 80rpx;
+  height: 80rpx;
 }

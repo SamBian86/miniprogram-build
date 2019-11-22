@@ -1,0 +1,2 @@
+/* components/auth-group/auth-login/auth-login.wxss */
+@import '../../../style/auth.scss.wxss';

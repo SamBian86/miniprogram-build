@@ -1,0 +1,135 @@
+.component_font_container {
+  position: fixed;
+  bottom: 0;
+  height: 160rpx;
+  background: #fff;
+  width: 100%;
+  box-sizing: border-box;
+  border-top: 1rpx solid #efefef;
+  display: flex;
+}
+
+.component_font_small {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 80rpx;
+  height: 160rpx;
+  font-size: 30rpx;
+  text-align: center;
+}
+
+.component_font_large {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 80rpx;
+  height: 160rpx;
+  font-size: 60rpx;
+  text-align: center;
+}
+
+.component_font_slider {
+  flex: 1;
+  margin: 0 40rpx;
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.component_font_line {
+  height: 2rpx;
+  width: 100%;
+  background: #666;
+  position: relative;
+}
+
+.component_font_line_0 {
+  position: absolute;
+  height: 21rpx;
+  width: 2rpx;
+  background: #666;
+  left: 0rpx;
+  top: -10rpx;
+}
+
+.component_font_line_20 {
+  position: absolute;
+  height: 21rpx;
+  width: 2rpx;
+  background: #666;
+  left: 20%;
+  top: -10rpx;
+}
+
+.component_font_line_40 {
+  position: absolute;
+  height: 21rpx;
+  width: 2rpx;
+  background: #666;
+  left: 40%;
+  top: -10rpx;
+}
+
+.component_font_line_60 {
+  position: absolute;
+  height: 21rpx;
+  width: 2rpx;
+  background: #666;
+  left: 60%;
+  top: -10rpx;
+}
+
+.component_font_line_80 {
+  position: absolute;
+  height: 21rpx;
+  width: 2rpx;
+  background: #666;
+  left: 80%;
+  top: -10rpx;
+}
+
+.component_font_line_100 {
+  position: absolute;
+  height: 21rpx;
+  width: 2rpx;
+  background: #666;
+  right: 0rpx;
+  top: -10rpx;
+}
+
+.component_font_circular {
+  width: 40rpx;
+  height: 40rpx;
+  border-radius: 20rpx;
+  overflow: hidden;
+  box-shadow: 0 0 5rpx #666;
+  background: #fff;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.component_font_circular_0 {
+  left: -20rpx;
+}
+
+.component_font_circular_1 {
+  left: calc((100vw - 240rpx) / 5 - 20rpx);
+}
+
+.component_font_circular_2 {
+  left: calc((100vw - 240rpx) / 5 * 2 - 20rpx);
+}
+
+.component_font_circular_3 {
+  left: calc((100vw - 240rpx) / 5 * 3 - 20rpx);
+}
+
+.component_font_circular_4 {
+  left: calc((100vw - 240rpx) / 5 * 4 - 20rpx);
+}
+
+.component_font_circular_5 {
+  left: calc((100vw - 240rpx) / 5 * 5 - 20rpx);
+}

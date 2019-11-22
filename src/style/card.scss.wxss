@@ -22,62 +22,47 @@
 
 .component_card_items {
   display: grid;
-  grid-template-columns: 327rpx 327rpx;
+  grid-template-columns: 210rpx 210rpx 210rpx;
+  justify-content: space-between;
 }
 
-.component_card_item_left {
+.component_card_item {
   position: relative;
-  height: 400rpx;
   display: flex;
+  flex-direction: column;
   justify-content: flex-start;
   margin-bottom: 20rpx;
 }
 
-.component_card_item_right {
-  position: relative;
-  height: 400rpx;
-  display: flex;
-  justify-content: flex-end;
-  margin-bottom: 20rpx;
-}
-
 .component_card_image_item {
-  position: absolute;
-  top: 0;
-  z-index: 100;
 }
 
 .component_card_image {
-  width: 312rpx;
-  height: 400rpx;
-  border-radius: 10rpx;
+  width: 210rpx;
+  height: 280rpx;
+  border-radius: 20rpx;
 }
 
 .component_card_image_text_item {
-  width: 312rpx;
-  position: absolute;
-  bottom: 20rpx;
-  z-index: 999;
+  width: 210rpx;
 }
 
 .component_card_image_text_title {
-  padding: 0 20rpx;
   height: 40rpx;
   overflow: hidden;
 }
 .component_card_image_text_title_text {
-  font-size: 32rpx;
+  font-size: 30rpx;
   font-weight: bold;
-  color: #fff;
+  color: #333;
 }
 
 .component_card_image_text_desc {
-  padding: 0 20rpx;
   height: 40rpx;
   overflow: hidden;
 }
 .component_card_image_text_desc_text {
   bottom: 20rpx;
   font-size: 24rpx;
-  color: #fff;
+  color: #999;
 }

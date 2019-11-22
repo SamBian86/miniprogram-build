@@ -1,0 +1,15 @@
+<!-- components/component-tab/tab.wxml -->
+<view class="component_tab_container">
+  <view wx:if="{{type === 'normal'}}" class="component_tab_normal">
+    <view wx:for="{{items}}" wx:key="index" bindtap="tapEvent" data-selected="{{index}}" data-item="{{item}}" class="component_tab_normal_item{{index === selected ? ' component_tab_normal_item_active' : ''}}">
+      {{item.name}}
+    </view>
+  </view>
+  <view wx:if="{{type === 'focus'}}" class="component_tab_focus">
+    <view wx:for="{{items}}" wx:key="index" bindtap="tapEvent" data-selected="{{index}}" data-item="{{item}}" class="component_tab_focus_item{{index === selected ? ' component_tab_focus_item_active' : ''}}">
+      <text class="component_tab_focus_text">{{item.name}}</text>
+      <view class="component_tab_focus_item_underline"></view>
+    </view>
+  </view>
+  <view wx:else></view>
+</view>

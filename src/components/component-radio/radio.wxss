@@ -1,0 +1,3 @@
+/* components/component-radio/radio.wxss */
+
+@import '../../style/radio.scss.wxss';

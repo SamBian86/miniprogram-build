@@ -1,0 +1,58 @@
+.component_pull_container {
+  position: relative;
+}
+
+.component_pull_container_tab {
+  padding-top: 80rpx;
+}
+
+.component_pull_loading {
+  padding: 15rpx 0;
+  text-align: center;
+  font-size: 30rpx;
+  color: #999;
+  width: 100%;
+  position: absolute;
+}
+
+.component_pull_loading_tab {
+  transform: translateY(-80rpx);
+}
+
+.component_pull_empty {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100%;
+  position: absolute;
+  top: 0;
+}
+
+.component_pull_empty_image {
+  width: 200rpx;
+  height: 137rpx;
+}
+
+.component_pull_empty_text {
+  font-size: 26rpx;
+  color: #999;
+  margin-top: 10rpx;
+}
+
+.component_pull_finish {
+  height: 60rpx;
+  line-height: 60rpx;
+  text-align: center;
+  font-size: 30rpx;
+  color: #999;
+}
+
+.component_pull_more {
+  height: 60rpx;
+  line-height: 60rpx;
+  text-align: center;
+  font-size: 30rpx;
+  color: #999;
+}

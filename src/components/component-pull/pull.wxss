@@ -1,0 +1,3 @@
+/* components/component-pull/pull.wxss */
+
+@import '../../style/pull.scss.wxss';

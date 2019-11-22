@@ -1,0 +1,21 @@
+<!-- components/component-camera/camera.wxml -->
+<component-mask id="mask">
+  <view class="component_camera_container">
+    <view class="component_camera_container_area{{visiable === false ? ' component_camera_container_area_hide' : ''}}">
+      <view class="component_camera_action">
+        <view class="component_camera_action_title">
+          <text class="component_camera_action_title_text">请选择文件来源</text>
+        </view>
+        <view class="component_camera_action_button" bindtap="openCamera">
+          <text class="component_camera_action_button_text">照相机</text>
+        </view>
+        <view class="component_camera_action_button" bindtap="openAlbum">
+          <text class="component_camera_action_button_text">本地相簿</text>
+        </view>
+      </view>
+      <view class="component_camera_action_close" bindtap="closePanel">
+        <text class="component_camera_action_close_text">取消</text>
+      </view>
+    </view>
+  </view>
+</component-mask>

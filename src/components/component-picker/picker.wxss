@@ -1,0 +1,2 @@
+/* components/component-picker/picker.wxss */
+@import '../../style/picker.scss.wxss';

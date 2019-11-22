@@ -1,0 +1,6 @@
+<!-- components/component-switch/switch.wxml -->
+<view class="component_switch_container{{containerClassName ? containerClassName: ''}}{{noPad ? ' component_switch_container_noPad': ''}}{{last ? ' component_switch_container_last': ''}}">
+  <slot name="prepend"></slot>
+  <switch data-name="{{dName}}" checked="{{value}}" bindchange="changeEvent" />
+  <slot name="append"></slot>
+</view>

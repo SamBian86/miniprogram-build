@@ -1,0 +1,43 @@
+/* component_textarea 组件区域 */
+.component_textarea_container {
+  background: #fff;
+  border-bottom: 2rpx solid #f1f1f1;
+  padding: 0 30rpx;
+  box-sizing: border-box;
+}
+
+.component_textarea_container_pure {
+  height: auto;
+  border-bottom: none;
+}
+
+.component_textarea_container_last {
+  border-bottom: none;
+}
+
+.component_textarea_container_noPad {
+  padding: 0rpx;
+}
+
+/* component_input 默认样式 */
+.component_textarea {
+  width: 690rpx;
+  height: 300rpx;
+  padding: 10rpx;
+  color: #000;
+  background: #fbfbfb;
+  border-radius: 10rpx;
+  font-size: 28rpx;
+}
+
+.component_textarea_small {
+  height: 120rpx;
+}
+
+.component_textarea_right {
+  text-align: right;
+}
+
+.textarea_placeholder {
+  color: #999;
+}

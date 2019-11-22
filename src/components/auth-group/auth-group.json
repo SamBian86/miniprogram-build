@@ -1,0 +1,9 @@
+{
+  "componentGenerics": {
+    "selectable": {
+      "default": "./auth-login/auth-login"
+    }
+  },
+  "component": true,
+  "usingComponents": {}
+}

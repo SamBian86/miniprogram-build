@@ -1,0 +1,3 @@
+/* components/component-input/input.wxss */
+
+@import '../../style/input.scss.wxss';

@@ -1,0 +1,35 @@
+<!-- components/component-button/button.wxml -->
+<block wx:if="{{type === 'code'}}">
+  <view bindtap="getCode" class="component_button_container component_button_code {{timing === true ? 'component_button_timing': ''}}">
+    {{ timing ? timingText : normalText }}
+  </view>
+</block>
+<block wx:elif="{{type === 'address'}}">
+  <view bindtap="tapEvent" class="component_button_container component_button_address">
+    <view class="address_area">
+      <image class="address_icon" src="../../images/address.png" />
+      <view class="address_text">{{addressText}}</view>
+    </view>
+  </view>
+</block>
+<block wx:elif="{{type === 'add'}}">
+  <view catchtap="tapEvent" class="component_button_add">
+    <view class="component_button_add_before"></view>
+    <view class="component_button_add_after"></view>
+  </view>
+</block>
+<block wx:elif="{{type === 'white'}}">
+  <view bindtap="tapEvent" class="component_button_container{{size ==='small' ? ' component_button_small': ''}}{{size === 'big' ? ' component_button_big': ''}} component_button_white" style="{{cssStyle}}">
+    <slot></slot>
+  </view>
+</block>
+<block wx:elif="{{type === 'gray'}}">
+  <view bindtap="tapEvent" class="component_button_container{{size ==='small' ? ' component_button_small': ''}}{{size === 'big' ? ' component_button_big': ''}} component_button_gray" style="{{cssStyle}}">
+    <slot></slot>
+  </view>
+</block>
+<block wx:else>
+  <view bindtap="tapEvent" class="component_button_container{{size ==='small' ? ' component_button_small': ''}}{{size === 'big' ? ' component_button_big': ''}}" style="{{cssStyle}}" hover-class="{{hoverClass}}">
+    <slot></slot>
+  </view>
+</block>

@@ -1,0 +1,3 @@
+/* components/component-button/button.wxss */
+
+@import '../../style/button.scss.wxss';

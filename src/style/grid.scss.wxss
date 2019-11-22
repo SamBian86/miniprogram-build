@@ -12,6 +12,7 @@
 .component_grid_three_image {
   width: 150rpx;
   height: 150rpx;
+  border-radius: 20rpx;
 }
 
 .component_grid_three_content {
@@ -19,6 +20,33 @@
 }
 
 .component_grid_three_text {
+  color: #666;
+  font-size: 30rpx;
+}
+
+/* four */
+.component_grid_four_columns {
+  display: grid;
+  grid-template-columns: 25% 25% 25% 25%;
+}
+
+.component_grid_four_item {
+  justify-self: center;
+  align-self: center;
+  padding: 10rpx 0rpx;
+}
+
+.component_grid_four_image {
+  width: 120rpx;
+  height: 120rpx;
+  border-radius: 20rpx;
+}
+
+.component_grid_four_content {
+  text-align: center;
+}
+
+.component_grid_four_text {
   color: #666;
   font-size: 30rpx;
 }

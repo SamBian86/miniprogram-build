@@ -1,0 +1,3 @@
+/* components/component-switch/switch.wxss */
+
+@import '../../style/switch.scss.wxss';

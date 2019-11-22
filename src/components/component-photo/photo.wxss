@@ -1,0 +1,3 @@
+/* components/component-photo/photo.wxss */
+
+@import '../../style/photo.scss.wxss';

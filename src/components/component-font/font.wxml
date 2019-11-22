@@ -1,0 +1,16 @@
+<!-- components/component-font/font.wxml -->
+<view class="component_font_container">
+  <view class="component_font_small">A</view>
+  <view class="component_font_slider" bindtouchstart="touchStart" bindtouchmove="touchMove" bindtouchend="touchEnd">
+    <view class="component_font_line">
+      <view class="component_font_line_0"></view>
+      <view class="component_font_line_20"></view>
+      <view class="component_font_line_40"></view>
+      <view class="component_font_line_60"></view>
+      <view class="component_font_line_80"></view>
+      <view class="component_font_line_100"></view>
+    </view>
+    <view class="component_font_circular component_font_circular_{{fontIndex}}"></view>
+  </view>
+  <view class="component_font_large">A</view>
+</view>

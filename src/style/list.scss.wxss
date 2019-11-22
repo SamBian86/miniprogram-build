@@ -1,0 +1,48 @@
+.component_list_container {
+  display: flex;
+  position: relative;
+}
+
+.component_list {
+  display: flex;
+  flex: 1;
+  padding: 25rpx 30rpx 25rpx 0rpx;
+  border-bottom: 1px solid #f1f1f1;
+  justify-content: flex-start;
+  align-items: center;
+  margin-left: 30rpx;
+}
+
+.component_list_noMar {
+  padding-left: 30rpx;
+  margin-left: 0rpx;
+}
+
+.component_list_noPad {
+  padding-left: 0rpx;
+  padding-right: 0rpx;
+}
+
+.component_list_noBord {
+  border: none;
+}
+
+.component_list_last {
+  border-bottom: 0px;
+}
+
+.component_list_text {
+  flex: 1;
+  color: #666;
+  min-width: 100rpx;
+  font-size: 36rpx;
+}
+
+.component_list_arrow {
+  margin-right: 20rpx;
+  width: 20rpx;
+  height: 20rpx;
+  border-top: 2px solid #d7d7d7;
+  border-right: 2px solid #d7d7d7;
+  transform: rotateZ(45deg);
+}

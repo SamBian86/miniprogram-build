@@ -8,16 +8,31 @@
   height: 100rpx;
   border-bottom: 2rpx solid #f1f1f1;
   padding: 0 30rpx;
+  box-sizing: border-box;
+}
+
+.component_input_container_pure {
+  height: auto;
+  border-bottom: none;
 }
 
 .component_input_container_last {
   border-bottom: none;
 }
 
+.component_input_container_noPad {
+  padding: 0rpx;
+}
+
 /* component_input 默认样式 */
 .component_input {
   flex: 1;
   color: #000;
+  font-size: 32rpx;
+}
+
+.component_input_right {
+  text-align: right;
 }
 
 .input_placeholder {

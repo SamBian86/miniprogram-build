@@ -1,0 +1,23 @@
+<!-- components/component-picker/picker.wxml -->
+<view wx:if="{{mode === 'date'}}" class="component_picker_container">
+  <picker data-name="{{dName}}" value="{{value}}" start="{{start}}" end="{{end}}" fields="{{fields}}" mode="date" bindchange="changeEvent">
+    <view class="component_picker_input {{value === '' ? ' component_picker_input_empty' : ''}}">
+      {{value === '' ? placeholder : value}}
+    </view>
+  </picker>
+</view>
+<view wx:elif="{{mode === 'time'}}" class="component_picker_container">
+  <picker data-name="{{dName}}" value="{{value}}" start="{{start}}" end="{{end}}" mode="time" bindchange="changeEvent">
+    <view class="component_picker_input {{value === '' ? ' component_picker_input_empty' : ''}}">
+      {{value === '' ? placeholder : value}}
+    </view>
+  </picker>
+</view>
+<view wx:elif="{{mode === 'selector'}}" class="component_picker_container">
+  <picker data-name="{{dName}}" data-value-key="{{dValueKey}}" value="{{value}}" data-range="{{range}}" range="{{range}}" range-key="{{rangeKey}}" mode="selector" bindchange="changeEvent">
+    <view class="component_picker_select {{value === '' ? ' component_picker_select_empty' : ''}}">
+      <view>{{value === '' ? placeholder : range[value][rangeKey]}}</view>
+      <view class="component_picker_select_arrow"></view>
+    </view>
+  </picker>
+</view>

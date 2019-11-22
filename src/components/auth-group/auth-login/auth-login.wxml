@@ -1,0 +1,48 @@
+<!-- components/auth-group/auth-login/auth-login.wxml 登录页面 -->
+<view class="auth_container">
+  <view class="auth_title">
+    <view class="auth_title_text">欢迎来到乐享耘林</view>
+    <view class="auth_title_register" bindtap="goRegister">注册</view>
+  </view>
+  <view class="auth_form">
+    <component-input d-name="mobile_String" d-value="{{form.mobile}}" value="{{form.mobile}}" bind:initdata="initData" bind:keyinput="keyInput" bind:afterkeyinput="watchMobile" type="number" placeholder="手机号">
+      <view class="auth_icon" slot="append" wx:if="{{mobileClean === true}}" bindtap="cleanMobile">
+        <image class="auth_mobile" src="../../../images/auth_tel_reset.png"></image>
+      </view>
+    </component-input>
+    <view class="auth_submit_area">
+      <view class="auth_submit{{!loginType ? '' : ' auth_submit_switch'}}">
+        <component-input css-style="width:calc(100vw - 64rpx);" d-name="password_String" bind:initdata="initData" bind:keyinput="keyInput" last="true" placeholder="请输入密码" password="{{!passType ? true : false}}">
+          <view class="auth_icon" bindtap="togglePassType" slot="append">
+            <image class="auth_lock" wx:if="{{!passType}}" src="../../../images/auth_password_hide.png"></image>
+            <image class="auth_lock" wx:if="{{passType}}" src="../../../images/auth_password_show.png"></image>
+          </view>
+          <!-- <view bindtap="goForget" class="auth_forget" slot="append">忘记密码</view> -->
+        </component-input>
+        <component-input css-style="width:calc(100vw - 64rpx);" d-name="vcode_String" bind:initdata="initData" bind:keyinput="keyInput" last="true" type="number" placeholder="请输入验证码">
+          <view class="auth_code" slot="append">
+            <component-button type="code" mobile="{{form.mobile}}" sms-type="3"></component-button>
+          </view>
+        </component-input>
+      </view>
+    </view>
+  </view>
+  <component-button size="big" bind:tapevent="tapEvent">登录</component-button>
+  <view class="other_login">
+    <view class="other_login_title">其他登录方式</view>
+    <button class="login_type" hover-class="none" open-type="getUserInfo" bindgetuserinfo="handleGetUserInfo">
+      <image class="wechat_icon" src="../../../images/wechat.png"></image>
+    </button>
+  </view>
+  <view class="auth_bottom{{!loginType ? '' : ' auth_bottom_switch'}}">
+    <view class="auth_bottom_forget">
+      <text bindtap="goForget">忘记密码</text>
+    </view>
+    <view class="auth_bottom_code">
+      <text bindtap="toggleLoginType">验证码登录</text>
+    </view>
+    <view class="auth_bottom_pass">
+      <text bindtap="toggleLoginType">密码登录</text>
+    </view>
+  </view>
+</view>

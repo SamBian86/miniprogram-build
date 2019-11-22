@@ -1,0 +1,17 @@
+<!-- components/component-pull/pull.wxml -->
+<view class="component_pull_container{{type === 'tab' ? ' component_pull_container_tab': ''}}" style="{{cssContainerStyle === '' ? '' : cssContainerStyle}}">
+  <view wx:if="{{pullStatus.loading}}" class="component_pull_loading{{type === 'tab' ? ' component_pull_loading_tab': ''}}" style="{{cssLoadingStyle === '' ? '' : cssLoadingStyle}}">
+    {{loadingText}}
+  </view>
+  <slot></slot>
+  <view wx:if="{{pullStatus.empty}}" class="component_pull_empty">
+    <image class="component_pull_empty_image" src="../../images/empty.png" mode="aspectFill" />
+    <text class="component_pull_empty_text">{{emptyText}}</text>
+  </view>
+  <view wx:if="{{!pullStatus.empty && pullStatus.init && pullStatus.finish}}" class="component_pull_finish">
+    {{finishText}}
+  </view>
+  <view wx:if="{{!pullStatus.empty && pullStatus.init && !pullStatus.finish}}" class="component_pull_more">
+    {{moreText}}
+  </view>
+</view>

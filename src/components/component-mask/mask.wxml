@@ -1,0 +1,4 @@
+<!-- components/component-mask/mask.wxml -->
+<view class="component_mask_container{{visiable === false ? '' : ' component_mask_container_block'}}{{animateShow === false ? '' : ' component_mask_container_show'}}" catchtouchmove="touchMove">
+  <slot></slot>
+</view>

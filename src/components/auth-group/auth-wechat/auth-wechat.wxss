@@ -1,0 +1,2 @@
+/* components/auth-group/auth-wechat/auth-wechat.wxss */
+@import '../../../style/auth.scss.wxss';

@@ -1,0 +1,3 @@
+/* components/component-tab/tab.wxss */
+
+@import '../../style/tab.scss.wxss';

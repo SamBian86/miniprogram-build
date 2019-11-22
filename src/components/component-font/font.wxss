@@ -1,0 +1,3 @@
+/* components/component-font/font.wxss */
+
+@import '../../style/font.scss.wxss';

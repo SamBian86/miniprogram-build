@@ -1,0 +1,3 @@
+/* components/component-touch/touch.wxss */
+
+@import '../../style/touch.scss.wxss';

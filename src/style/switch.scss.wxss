@@ -1,0 +1,23 @@
+.component_switch_container {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  background: #fff;
+  height: 100rpx;
+  border-bottom: 2rpx solid #f1f1f1;
+  padding: 0 30rpx;
+}
+
+.component_switch_container_pure {
+  height: auto;
+  border-bottom: none;
+}
+
+.component_switch_container_last {
+  border-bottom: none;
+}
+
+.component_switch_container_noPad {
+  padding: 0rpx;
+}

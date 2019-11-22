@@ -1,0 +1,3 @@
+/* components/component-camera/camera.wxss */
+
+@import '../../style/camera.scss.wxss';

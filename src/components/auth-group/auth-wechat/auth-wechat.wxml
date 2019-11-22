@@ -1,0 +1,19 @@
+<!-- components/auth-group/auth-wechat/auth-wechat.wxml -->
+<view class="auth_container">
+  <view class="auth_title">
+    <view class="auth_title_text">绑定手机号</view>
+  </view>
+  <view class="auth_form">
+    <component-input d-name="mobile_String" bind:initdata="initData" bind:keyinput="keyInput" type="number" placeholder="请输入手机号"></component-input>
+    <component-input d-name="vcode_String" bind:initdata="initData" bind:keyinput="keyInput" last="true" type="number" placeholder="验证码">
+      <view class="auth_code" slot="append">
+        <component-button type="code" mobile="{{form.mobile}}" sms-type="4"></component-button>
+      </view>
+    </component-input>
+  </view>
+  <component-button size="big" bind:tapevent="tapEvent">确认</component-button>
+  <view class="auth_copyright">
+    <text class="auth_copyright_normal">确认代表您同意</text>
+    <text class="auth_copyright_warning" bindtap="goPrivacy">《用户协议和隐私政策》</text>
+  </view>
+</view>

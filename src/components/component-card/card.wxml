@@ -1,0 +1,24 @@
+<!-- components/component-card/card.wxml -->
+<block wx:if="{{type === 'service'}}">
+  <view class="component_card_title">
+    <slot name="icon"></slot>
+    <text class="component_card_title_text">{{title}}</text>
+    <text class="component_card_title_tips">{{tips}}</text>
+  </view>
+  <view class="component_card_items">
+    <view wx:for="{{items}}" wx:key="index" class="component_card_item" data-id="{{item[itemKey]}}" bindtap="tapEvent">
+      <view class="component_card_image_item">
+        <image class="component_card_image" lazy-load="{{lazyLoad}}" mode="{{mode}}" src="{{item.src}}" />
+      </view>
+      <view class="component_card_image_text_item">
+        <view class="component_card_image_text_title">
+          <text class="component_card_image_text_title_text">{{item.title}}</text>
+        </view>
+        <view class="component_card_image_text_desc">
+          <text class="component_card_image_text_desc_text">{{item.desc}}</text>
+        </view>
+      </view>
+    </view>
+  </view>
+</block>
+<block wx:else>其他</block>

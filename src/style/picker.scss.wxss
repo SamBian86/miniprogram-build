@@ -1,0 +1,30 @@
+/* component_picker 组件区域 */
+.component_picker_container {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: flex-end;
+  background: #fff;
+  height: 50rpx;
+}
+
+.component_picker_input_empty {
+  color: #999;
+}
+
+.component_picker_select {
+  display: flex;
+  align-items: center;
+}
+
+.component_picker_select_empty {
+  color: #999;
+}
+
+.component_picker_select_arrow {
+  width: 20rpx;
+  height: 20rpx;
+  border-top: 2px solid #d7d7d7;
+  border-right: 2px solid #d7d7d7;
+  transform: rotateZ(45deg);
+}

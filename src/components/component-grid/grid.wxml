@@ -1,0 +1,37 @@
+<!-- components/component-grid/grid.wxml -->
+<block wx:if="{{type==='columns' && columns === 'three'}}">
+  <view class="component_grid_{{columns}}_columns">
+    <view wx:for="{{menus}}" wx:key="index" class="component_grid_{{columns}}_item" bindtap="tapEvent" data-url="{{item.url}}">
+      <view>
+        <image class="component_grid_{{columns}}_image" src="{{item.src}}" mode="aspectFill"></image>
+      </view>
+      <view class="component_grid_{{columns}}_content">
+        <text class="component_grid_{{columns}}_text">{{item.name}}</text>
+      </view>
+    </view>
+  </view>
+</block>
+<block wx:elif="{{type==='config'}}">
+  <view class="component_flex_{{columns}}_columns">
+    <view wx:for="{{menus}}" wx:key="index" class="component_flex_{{columns}}_item" bindtap="tapEvent" data-url="{{item.url}}">
+      <view class="component_flex_{{columns}}_image_box">
+        <image style="{{item.style}}" src="{{item.src}}"></image>
+      </view>
+      <view class="component_flex_{{columns}}_content">
+        <text class="component_flex_{{columns}}_text">{{item.name}}</text>
+      </view>
+    </view>
+  </view>
+</block>
+<block wx:else>
+  <view class="component_grid_{{columns}}_columns">
+    <view wx:for="{{menus}}" wx:key="index" class="component_grid_{{columns}}_item" bindtap="tapEvent" data-url="{{item.url}}">
+      <view>
+        <image class="component_grid_{{columns}}_image" src="{{item.src}}" mode="aspectFill"></image>
+      </view>
+      <view class="component_grid_{{columns}}_content">
+        <text class="component_grid_{{columns}}_text">{{item.name}}</text>
+      </view>
+    </view>
+  </view>
+</block>

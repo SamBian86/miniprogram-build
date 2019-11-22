@@ -1,0 +1,3 @@
+/* components/component-textarea/textarea.wxss */
+
+@import '../../style/textarea.scss.wxss';

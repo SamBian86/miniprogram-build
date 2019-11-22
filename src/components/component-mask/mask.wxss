@@ -1,0 +1,3 @@
+/* components/component-mask/mask.wxss */
+
+@import '../../style/mask.scss.wxss';

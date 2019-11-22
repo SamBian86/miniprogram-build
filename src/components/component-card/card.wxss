@@ -1,0 +1,3 @@
+/* components/component-card/card.wxss */
+
+@import '../../style/card.scss.wxss';

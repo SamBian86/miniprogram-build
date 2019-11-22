@@ -11,8 +11,10 @@
 
 .component_button_big {
   height: 80rpx;
+  line-height: 80rpx;
   border-radius: 40rpx;
-  background: #ff5b4f;
+  background: #20dccf;
+  border: 2rpx solid #20dccf;
   color: #fff;
   font-size: 32rpx;
 }
@@ -20,32 +22,48 @@
 .component_button_small {
   padding: 5rpx 10rpx;
   border-radius: 20rpx;
-  background: #ff5b4f;
+  background: #20dccf;
+  border: 2rpx solid #20dccf;
   color: #fff;
   font-size: 30rpx;
+}
+
+.component_button_white {
+  color: #20dccf;
+  background: #fff;
+  border: 2rpx solid #20dccf;
+}
+
+.component_button_gray {
+  color: #666;
+  background: #fff;
+  border: 2rpx solid #ccc;
 }
 
 .component_button_code {
   padding: 5rpx 10rpx;
   border-radius: 20rpx;
-  background: #ff5b4f;
+  background: #20dccf;
   color: #fff;
   font-size: 30rpx;
 }
 
 .component_button_address {
   display: inline-block;
-  padding: 5rpx 10rpx;
-  border-radius: 20rpx;
-  background: #ddd;
+  padding: 5rpx 0rpx;
+  border-radius: 25rpx;
+  background: #fff;
+  /* background: #ddd; */
   color: #000;
   font-size: 30rpx;
+  height: 50rpx;
+  line-height: 50rpx;
 }
 
 .component_button_timing {
   padding: 5rpx 10rpx;
   border-radius: 20rpx;
-  background: #ff5b4f;
+  background: #20dccf;
   color: #fff;
   font-size: 30rpx;
 }
@@ -55,7 +73,7 @@
 }
 
 .button_hover_class {
-  background: #ff9d96;
+  background: #8fede2;
 }
 
 .address_area {
@@ -70,4 +88,39 @@
   width: 30rpx;
   height: 30rpx;
   margin-right: 10rpx;
+}
+
+.address_text {
+  color: #999;
+}
+
+.component_button_add {
+  background: #20dccf;
+  width: 80rpx;
+  height: 80rpx;
+  position: fixed;
+  bottom: 180rpx;
+  right: 80rpx;
+  border-radius: 20rpx;
+  box-shadow: 0rpx 0rpx 5rpx rgba(42, 42, 42, 0.2);
+}
+
+.component_button_add_before {
+  width: 4rpx;
+  height: 80%;
+  background: #fff;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.component_button_add_after {
+  height: 4rpx;
+  width: 80%;
+  background: #fff;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
 }

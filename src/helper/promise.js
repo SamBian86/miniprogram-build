@@ -2,18 +2,47 @@
 
 const utils = require('../utils/promise')
 const wxApiName = [
+  'getLaunchOptionsSync',
+  'getUserInfo',
   'request',
+  'login',
+  'uploadFile',
+  'getSystemInfo',
   'showToast',
+  'hideToast',
   'showModal',
+  'showLoading',
+  'hideLoading',
   'navigateTo',
   'navigateBack',
-  'switchTab'
+  'switchTab',
+  'chooseImage',
+  'setBackgroundColor',
+  'setNavigationBarColor',
+  'stopPullDownRefresh',
+  'pageScrollTo',
+  'makePhoneCall',
+  'setStorage',
+  'getStorage',
+  'requestPayment',
+  'openLocation',
+  'showShareMenu',
+  'updateShareMenu',
+  'hideShareMenu',
+  'getShareInfo',
+  'navigateToMiniProgram'
 ]
 
 wx.p = {}
 wxApiName.map(name => {
   const native = wx[name]
-  wx.p[name] = (...opts) => {
-    return utils.promise.apply(this, [native, ...opts])
+  if (name === 'request' || name === 'uploadFile') {
+    wx.p[name] = (...opts) => {
+      return utils.ajax_promise.apply(this, [native, ...opts])
+    }
+  } else {
+    wx.p[name] = (...opts) => {
+      return utils.promise.apply(this, [native, ...opts])
+    }
   }
 })

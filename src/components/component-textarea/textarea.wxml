@@ -1,0 +1,4 @@
+<!-- components/component-textarea/textarea.wxml -->
+<view class="component_textarea_container{{containerClassName ? ' ' + containerClassName: ''}}{{noPad ? ' component_textarea_container_noPad': ''}}{{last ? ' component_textarea_container_last': ''}}">
+  <textarea class="component_textarea {{className}}" style="{{cssStyle}}" data-name="{{dName}}" disabled="{{disabled}}" value="{{value}}" placeholder="{{placeholder}}" placeholder-style="{{placeholderStyle}}" placeholder-class="{{placeholderClass}}" bindinput="textareaEvent" />
+</view>

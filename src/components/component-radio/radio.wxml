@@ -1,0 +1,10 @@
+<!-- components/component-radio/radio.wxml -->
+<radio-group class="component_radio_group" data-name="{{dName}}" bindchange="changeEvent">
+  <view class="component_radio" wx:for="{{items}}" wx:key="index">
+    <image class="component_radio_image" wx:if="{{item.icon !== '' && item.icon !== undefined}}" src="{{item.icon}}" mode="aspectFill" />
+    <view class="component_radio_text">{{item.label}}</view>
+    <view class="component_radio_icon">
+      <radio value="{{item.value}}" checked="{{item.checked}}" color="{{color}}" />
+    </view>
+  </view>
+</radio-group>

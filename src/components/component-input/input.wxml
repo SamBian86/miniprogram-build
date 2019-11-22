@@ -1,0 +1,6 @@
+<!-- components/component-input/input.wxml -->
+<view class="component_input_container{{containerClassName ? ' ' + containerClassName: ''}}{{noPad ? ' component_input_container_noPad': ''}}{{last ? ' component_input_container_last': ''}}" style="{{cssStyle}}">
+  <slot name="prepend"></slot>
+  <input class="component_input {{className}}" data-name="{{dName}}" data-value="{{dValue}}" value="{{value}}" type="{{type}}" password="{{password}}" placeholder="{{placeholder}}" placeholder-style="{{placeholderStyle}}" placeholder-class="{{placeholderClass}}" bindinput="inputEvent" />
+  <slot name="append"></slot>
+</view>
