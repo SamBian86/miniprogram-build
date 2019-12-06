@@ -33,6 +33,10 @@ module.exports = Behavior({
     cssStyle: {
       type: String,
       value: ''
+    },
+    arrowMar: {
+      type: Boolean,
+      value: false
     }
   },
   data: {},

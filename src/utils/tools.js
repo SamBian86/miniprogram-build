@@ -31,5 +31,9 @@ module.exports = {
         )
       }
     return fmt
+  },
+  getRandom: function() {
+    const t = new Date().getTime()
+    return `store_${t}`
   }
 }

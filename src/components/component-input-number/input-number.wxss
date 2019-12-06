@@ -1,0 +1,3 @@
+/* components/component-input-number/input-number.wxss */
+
+@import '../../style/input-number.scss.wxss';

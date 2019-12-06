@@ -46,3 +46,7 @@
   border-right: 2px solid #d7d7d7;
   transform: rotateZ(45deg);
 }
+
+.component_list_arrow_noMar {
+  margin-right: 0rpx;
+}

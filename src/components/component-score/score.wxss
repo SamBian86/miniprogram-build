@@ -1,0 +1,3 @@
+/* components/component-score/score.wxss */
+
+@import '../../style/score.scss.wxss';

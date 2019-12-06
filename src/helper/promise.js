@@ -30,7 +30,8 @@ const wxApiName = [
   'updateShareMenu',
   'hideShareMenu',
   'getShareInfo',
-  'navigateToMiniProgram'
+  'navigateToMiniProgram',
+  'scanCode'
 ]
 
 wx.p = {}

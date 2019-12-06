@@ -80,6 +80,7 @@ Component({
       if (photoType === 'remove') {
         photolists.splice(photoIndex, 1)
         e.photoType = 'remove'
+        e.photoIndex = photoIndex
       }
       e.value = photolists
 

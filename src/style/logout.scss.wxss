@@ -1,0 +1,30 @@
+.logout_confirm {
+  width: 80%;
+  background: #fff;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%) scale(1, 1);
+  border-radius: 20rpx;
+  transition: all 0.5s;
+}
+
+.logout_confirm_hide {
+  transform: translate(-50%, -50%) scale(0, 0);
+}
+
+.logout_confirm_title {
+  padding: 40rpx;
+  text-align: center;
+  color: #333;
+}
+
+.logout_confirm_button_area {
+  padding: 40rpx;
+  display: flex;
+}
+
+.logout_confirm_button {
+  flex: 1;
+  padding: 0 20rpx;
+}

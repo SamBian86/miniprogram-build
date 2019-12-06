@@ -46,7 +46,39 @@ module.exports = {
       [key]: value
     })
   },
-  // 父组件date time类型picker事件接收数据
+  // 父组件input-number事件接收数据
+  keyInputNumber: function(e) {
+    // console.log('keyInputNumber')
+    const name = this.getTarget(this.getEventDetail(e), 'dataset')[
+      'name'
+    ].split('_')[0]
+    const type = this.getTarget(this.getEventDetail(e), 'dataset')[
+      'name'
+    ].split('_')[1]
+    const value = this.getValueByType(
+      type,
+      this.getEventDetail(this.getEventDetail(e))['value']
+    )
+    const min = this.getTarget(this.getEventDetail(e), 'dataset')['min']
+    const max = this.getTarget(this.getEventDetail(e), 'dataset')['max']
+    const key = 'form.' + name
+    let _value
+    if (value === 0) {
+      _value = ''
+    } else {
+      if (value >= max) {
+        _value = max
+      } else if (value <= min) {
+        _value = min
+      } else {
+        _value = value
+      }
+    }
+    this.setData({
+      [key]: _value
+    })
+  },
+  // 父附件picker事件接收数据
   pickerChange: function(e) {
     // console.log('pickerChange')
     const name = this.getTarget(this.getEventDetail(e), 'dataset')[
@@ -68,7 +100,6 @@ module.exports = {
   // 父组件自定义类型picker事件接收数据
   pickerSelectorChange: function(e) {
     console.log('pickerSelectorChange')
-    console.log(e)
     const name = this.getTarget(this.getEventDetail(e), 'dataset')[
       'name'
     ].split('_')[0]
@@ -181,6 +212,25 @@ module.exports = {
     this.setData({
       [key]: value,
       [photoName]: JSON.stringify(value)
+    })
+  },
+  // 打分控件
+  scoreChange: function(e) {
+    // console.log('radioChange')
+    const name = this.getCurrentTarget(this.getEventDetail(e), 'dataset')[
+      'name'
+    ].split('_')[0]
+    const type = this.getCurrentTarget(this.getEventDetail(e), 'dataset')[
+      'name'
+    ].split('_')[1]
+    const value = this.getValueByType(
+      type,
+      this.getCurrentTarget(this.getEventDetail(e), 'dataset')['idx'] + 1
+    )
+    const key = 'form.' + name
+
+    this.setData({
+      [key]: value
     })
   }
 }

@@ -28,6 +28,7 @@
   background: #fbfbfb;
   border-radius: 10rpx;
   font-size: 28rpx;
+  box-sizing: border-box;
 }
 
 .component_textarea_small {

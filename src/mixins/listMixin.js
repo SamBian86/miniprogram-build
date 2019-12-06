@@ -19,6 +19,7 @@ module.exports = {
     this.pullDownEvent()
   },
   // ajax获取数据抽象方法
+  afterGetList: function() {},
   getList: function() {},
   // 页面相关事件处理函数--监听用户下拉动作
   onPullDownRefresh: function() {
@@ -98,6 +99,7 @@ module.exports = {
                 'pullStatus.empty': empty
               },
               () => {
+                this.afterGetList(res.data.results)
                 this.stopPullDownRefresh()
                 this.pageScrollTo({
                   scrollTop: 0,
@@ -135,16 +137,26 @@ module.exports = {
           .then(res => {
             console.log('上拉加载获取数据成功')
             if (res.data.results.list.length === 0) {
-              this.setData({
-                'pullStatus.loading': false,
-                'pullStatus.finish': true
-              })
+              this.setData(
+                {
+                  'pullStatus.loading': false,
+                  'pullStatus.finish': true
+                },
+                () => {
+                  this.afterGetList(res.data.results)
+                }
+              )
             } else {
-              this.setData({
-                lists: [...lists, ...res.data.results.list],
-                'pullStatus.loading': false,
-                'pullStatus.finish': false
-              })
+              this.setData(
+                {
+                  lists: [...lists, ...res.data.results.list],
+                  'pullStatus.loading': false,
+                  'pullStatus.finish': false
+                },
+                () => {
+                  this.afterGetList(res.data.results)
+                }
+              )
             }
           })
           .catch(() => {

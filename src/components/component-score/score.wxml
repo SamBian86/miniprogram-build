@@ -1,0 +1,9 @@
+<!-- components/component-score/score.wxml -->
+<view class="component_score_container">
+  <slot name="prepend"></slot>
+  <view class="component_score">
+    <view class="component_score_star" data-name="{{dName}}" data-value="{{dValue}}" wx:for="{{scoreMax}}" wx:key="index" bindtap="scoreEvent" data-idx="{{index}}">
+      <image class="component_star_icon" src="{{ index <= dValue - 1 ? '../../images/star_yellow.png' : '../../images/star_gary.png' }}"></image>
+    </view>
+  </view>
+</view>

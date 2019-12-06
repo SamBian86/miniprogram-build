@@ -1,0 +1,24 @@
+.component_score_container {
+  display: flex;
+  position: relative;
+  height: 96rpx;
+  align-items: center;
+}
+
+.component_score {
+  display: flex;
+  flex: 1;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.component_score_star {
+  width: 50rpx;
+  height: 50rpx;
+  margin-right: 10rpx;
+}
+
+.component_star_icon {
+  width: 50rpx;
+  height: 50rpx;
+}

@@ -1,0 +1,66 @@
+.component_input_number_container {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+  background: #fff;
+  /* height: 100rpx; */
+  box-sizing: border-box;
+}
+
+.component_input_number_reduce {
+  width: 40rpx;
+  height: 40rpx;
+  border-radius: 20rpx;
+  background: #ddd;
+  position: relative;
+}
+
+.component_input_number_reduce_before {
+  position: absolute;
+  width: 60%;
+  height: 8rpx;
+  background: #fff;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -4rpx);
+}
+
+.component_input_number_area {
+}
+
+.component_input_number_input {
+  width: 60rpx;
+  margin: 0rpx 10rpx;
+  border: 2rpx solid #999;
+  border-radius: 8rpx;
+  text-align: center;
+}
+
+.component_input_number_add {
+  width: 40rpx;
+  height: 40rpx;
+  border-radius: 20rpx;
+  background: #20dccf;
+  position: relative;
+}
+
+.component_input_number_add_before {
+  position: absolute;
+  width: 60%;
+  height: 8rpx;
+  background: #fff;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -4rpx);
+}
+
+.component_input_number_add_after {
+  position: absolute;
+  width: 60%;
+  height: 8rpx;
+  background: #fff;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -4rpx) rotate(90deg);
+}

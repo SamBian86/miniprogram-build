@@ -2,6 +2,7 @@ const common = require('../utils/common')
 const app = getApp()
 const commonMixin = {
   data: {
+    host: app.globalData.config.host,
     api: app.globalData.config.api,
     version: app.globalData.config.version,
     platformType: app.globalData.config.platformType,

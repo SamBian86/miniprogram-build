@@ -5,6 +5,6 @@
     <text wx:if="{{title !== ''}}" class="component_list_text">{{title}}</text>
     <slot></slot>
     <slot name="append"></slot>
-    <view wx:if="{{arrow !== false}}" class="component_list_arrow"></view>
+    <view wx:if="{{arrow !== false}}" class="component_list_arrow{{arrowMar !== false ? ' component_list_arrow_noMar' : ''}}"></view>
   </view>
 </view>

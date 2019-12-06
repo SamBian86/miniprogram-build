@@ -91,6 +91,9 @@ module.exports = {
   getSystemInfo: function(obj) {
     return wx.p.getSystemInfo(obj)
   },
+  getSystemInfoSync: function() {
+    return wx.getSystemInfoSync()
+  },
   showShareMenu: function(obj) {
     return wx.p.showShareMenu(obj)
   },
@@ -105,6 +108,20 @@ module.exports = {
   },
   navigateToMiniProgram: function(obj) {
     return wx.p.navigateToMiniProgram(obj)
+  },
+  scanCode: function(obj) {
+    return wx.p.scanCode(obj)
+  },
+  setStore: function(key, value) {
+    this.setStorageSync(key, value)
+  },
+  getStore: function(key) {
+    try {
+      const value = this.getStorageSync(key)
+      if (value) {
+        return value
+      }
+    } catch (e) {}
   },
   goTo: function(e) {
     const url = this.getEventDetail(e, 'url')
