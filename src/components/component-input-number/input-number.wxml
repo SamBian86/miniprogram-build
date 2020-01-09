@@ -1,12 +1,12 @@
 <!-- components/component-input-number/input-number.wxml -->
 <view class="component_input_number_container">
-  <view class="component_input_number_reduce" value="{{c_value}}" bindtap="inputReduceEvent">
+  <view class="component_input_number_reduce" bindtap="inputReduceEvent">
     <view class="component_input_number_reduce_before"></view>
   </view>
   <view class="component_input_number_area">
-    <input class="component_input_number_input {{className}}" data-min="{{min}}" data-max="{{max}}" data-name="{{dName}}" data-value="{{dValue}}" type="number" value="{{c_value !== 1 ? c_value : value}}" bindinput="inputEvent" />
+    <input class="component_input_number_input" data-min="{{min}}" data-max="{{max}}" data-name="{{dName}}" data-value="{{dValue}}" type="number" value="{{c_value !== 1 ? c_value : value}}" bindinput="inputEvent" />
   </view>
-  <view class="component_input_number_add" data-value="{{c_value}}" bindtap="inputAddEvent">
+  <view class="component_input_number_add" bindtap="inputAddEvent">
     <view class="component_input_number_add_before"></view>
     <view class="component_input_number_add_after"></view>
   </view>

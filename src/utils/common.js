@@ -43,6 +43,9 @@ module.exports = {
   chooseImage: function(obj) {
     return wx.p.chooseImage(obj)
   },
+  chooseVideo: function(obj) {
+    return wx.p.chooseVideo(obj)
+  },
   setBackgroundColor: function(obj) {
     return wx.p.setBackgroundColor(obj)
   },

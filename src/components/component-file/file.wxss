@@ -1,0 +1,2 @@
+/* components/component-file/file.wxss */
+@import '../../style/file.scss.wxss';

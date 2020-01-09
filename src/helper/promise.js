@@ -17,6 +17,7 @@ const wxApiName = [
   'navigateBack',
   'switchTab',
   'chooseImage',
+  'chooseVideo',
   'setBackgroundColor',
   'setNavigationBarColor',
   'stopPullDownRefresh',

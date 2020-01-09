@@ -16,7 +16,9 @@
 <view wx:elif="{{mode === 'selector'}}" class="component_picker_container">
   <picker data-name="{{dName}}" data-value-key="{{dValueKey}}" value="{{value}}" data-range="{{range}}" range="{{range}}" range-key="{{rangeKey}}" mode="selector" bindchange="changeEvent">
     <view class="component_picker_select {{value === '' ? ' component_picker_select_empty' : ''}}">
-      <view>{{value === '' ? placeholder : range[value][rangeKey]}}</view>
+      <view class="component_picker_select_text">
+        {{value === '' ? placeholder : range[value][rangeKey]}}
+      </view>
       <view class="component_picker_select_arrow"></view>
     </view>
   </picker>

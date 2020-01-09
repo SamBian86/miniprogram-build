@@ -21,6 +21,9 @@ module.exports = {
   // ajax获取数据抽象方法
   afterGetList: function() {},
   getList: function() {},
+  formatData: function(lists) {
+    return lists
+  },
   // 页面相关事件处理函数--监听用户下拉动作
   onPullDownRefresh: function() {
     const loading = this.data.pullStatus.loading
@@ -71,7 +74,7 @@ module.exports = {
             console.log('下拉刷新获取数据成功')
             let finish = false,
               empty = false
-
+            res.data.results.list = this.formatData(res.data.results.list)
             if (res.data.results.list.length === 0) {
               empty = true
               finish = true
@@ -136,6 +139,7 @@ module.exports = {
         this.getList(this.data.listQuery)
           .then(res => {
             console.log('上拉加载获取数据成功')
+            res.data.results.list = this.formatData(res.data.results.list)
             if (res.data.results.list.length === 0) {
               this.setData(
                 {

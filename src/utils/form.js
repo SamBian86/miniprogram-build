@@ -214,6 +214,46 @@ module.exports = {
       [photoName]: JSON.stringify(value)
     })
   },
+  fileChange: function(e) {
+    const actionType = this.getEventDetail(e, 'actionType')
+    let name, type, value, fileName, key
+    if (actionType === 'remove') {
+      name = this.getTarget(
+        this.getEventDetail(this.getEventDetail(e)),
+        'dataset'
+      )['name'].split('_')[0]
+      type = this.getTarget(
+        this.getEventDetail(this.getEventDetail(e)),
+        'dataset'
+      )['name'].split('_')[1]
+      value = this.getValueByType(
+        type,
+        JSON.stringify(this.getEventDetail(e, 'value'))
+      )
+      fileName = this.getTarget(
+        this.getEventDetail(this.getEventDetail(e)),
+        'dataset'
+      )['fileName']
+    } else {
+      name = this.getTarget(this.getEventDetail(e), 'dataset')['name'].split(
+        '_'
+      )[0]
+      type = this.getTarget(this.getEventDetail(e), 'dataset')['name'].split(
+        '_'
+      )[1]
+      value = this.getValueByType(
+        type,
+        JSON.stringify(this.getEventDetail(e, 'value'))
+      )
+      fileName = this.getTarget(this.getEventDetail(e), 'dataset')['fileName']
+    }
+
+    key = 'form.' + name
+    this.setData({
+      [key]: value,
+      [fileName]: JSON.stringify(value)
+    })
+  },
   // 打分控件
   scoreChange: function(e) {
     // console.log('radioChange')

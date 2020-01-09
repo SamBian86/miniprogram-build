@@ -1,0 +1,6 @@
+{
+  "component": true,
+  "usingComponents": {
+    "component-file-type": "../component-file-type/file-type"
+  }
+}

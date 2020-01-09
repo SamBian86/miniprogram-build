@@ -1,0 +1,18 @@
+<!-- components/component-file-type/file-type.wxml -->
+<component-mask id="mask">
+  <view class="file_type_container">
+    <view class="file_type_container_area{{visiable === false ? ' file_type_container_area_hide' : ''}}">
+      <view class="file_type_action">
+        <view wx:if="{{photoNum < max - videoNum}}" class="file_type_action_button" data-file-type="add" bindtap="openPhoto">
+          <text class="file_type_action_button_text">图片</text>
+        </view>
+        <view wx:if="{{videoNum < video}}" class="file_type_action_button" data-file-type="add" bindtap="openVideo">
+          <text class="file_type_action_button_text">视频</text>
+        </view>
+      </view>
+      <view class="file_type_action_close" bindtap="closePanel">
+        <text class="file_type_action_close_text">取消</text>
+      </view>
+    </view>
+  </view>
+</component-mask>

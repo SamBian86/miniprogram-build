@@ -21,6 +21,20 @@
   color: #999;
 }
 
+.component_picker_select_text {
+  padding: 0rpx 10rpx;
+  width: 150rpx;
+  text-align: right;
+  height: 40rpx;
+  line-height: 40rpx;
+  overflow: hidden;
+  display: -webkit-box;
+  text-overflow: ellipsis;
+  word-break: break-all;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 1;
+}
+
 .component_picker_select_arrow {
   width: 20rpx;
   height: 20rpx;

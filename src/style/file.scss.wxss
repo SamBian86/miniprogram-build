@@ -1,0 +1,53 @@
+.component_file_container {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  /* height: 100vh; */
+}
+
+.component_file {
+  width: calc((100vw - 100rpx) / 3);
+  height: calc((100vw - 80rpx) / 5);
+  line-height: calc((100vw - 80rpx) / 5);
+  background: #fff;
+  margin-bottom: 10rpx;
+  margin-right: 10rpx;
+  border-radius: 20rpx;
+  text-align: center;
+  overflow: hidden;
+}
+
+.component_file_add {
+  background: #fbfbfb;
+  position: relative;
+}
+
+.component_file_hack {
+  margin-right: 0rpx;
+}
+
+.component_file_add_before {
+  width: 4rpx;
+  height: 40rpx;
+  background: #999;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.component_file_add_after {
+  height: 4rpx;
+  width: 40rpx;
+  background: #999;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.component_file_style {
+  width: calc((100vw - 100rpx) / 3);
+  height: calc((100vw - 80rpx) / 5);
+}

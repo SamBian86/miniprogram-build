@@ -23,7 +23,12 @@ const ajax_promise = (fn, opts = {}) => {
       }
       if (_res.data.code === 0) {
         resolve(_res)
-      } else if (_res.data.code === 40019 || _res.data.code === 40125) {
+      } else if (
+        _res.data.code === 40019 ||
+        _res.data.code === 40125 ||
+        _res.data.code === 45510 ||
+        _res.data.code === 40121
+      ) {
         // wx.p.showToast({
         //   title: '请登录',
         //   icon: 'none',

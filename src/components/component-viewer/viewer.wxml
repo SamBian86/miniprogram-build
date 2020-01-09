@@ -1,0 +1,15 @@
+<!-- components/component-viewer/viewer.wxml -->
+<component-mask id="mask">
+  <view class="component_viewer_container" bindtap="closePanel">
+    <view class="component_viewer_area" style="{{cssStyle}}">
+      <swiper class="component_viewer_swiper" indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" bindchange="viewerChange">
+        <block wx:for="{{items}}" wx:key="index">
+          <swiper-item class="component_viewer_swiper_item">
+            <image class="component_viewer_image" wx:if="{{item.type === 'photo'}}" src="{{item.url}}" mode="aspectFill" catchtap="catchEvent"></image>
+            <video id="video{{item.id}}" class="component_viewer_video" wx:if="{{item.type === 'video'}}" src="{{item.src}}" catchtap="catchEvent"></video>
+          </swiper-item>
+        </block>
+      </swiper>
+    </view>
+  </view>
+</component-mask>

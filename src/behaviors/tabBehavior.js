@@ -13,6 +13,10 @@ module.exports = Behavior({
     selected: {
       type: Number,
       value: -1
+    },
+    focusColor: {
+      type: String,
+      value: ''
     }
   },
   data: {},

@@ -1,0 +1,2 @@
+/* components/component-viewer/viewer.wxss */
+@import '../../style/viewer.scss.wxss';
