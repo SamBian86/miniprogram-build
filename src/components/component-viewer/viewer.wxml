@@ -5,8 +5,12 @@
       <swiper class="component_viewer_swiper" indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" bindchange="viewerChange">
         <block wx:for="{{items}}" wx:key="index">
           <swiper-item class="component_viewer_swiper_item">
-            <image class="component_viewer_image" wx:if="{{item.type === 'photo'}}" src="{{item.url}}" mode="aspectFill" catchtap="catchEvent"></image>
-            <video id="video{{item.id}}" class="component_viewer_video" wx:if="{{item.type === 'video'}}" src="{{item.src}}" catchtap="catchEvent"></video>
+            <image class="component_viewer_image" wx:if="{{item.type === 'photo'}}" src="{{item.url}}" mode="aspectFit" catchtap="catchEvent"></image>
+            <image class="component_viewer_video_image" wx:if="{{item.type === 'video' && item.videoShow !== true}}" src="{{item.url}}" mode="aspectFit" catchtap="catchPlay" data-id="{{item.id}}"></image>
+            <view wx:if="{{item.type === 'video' && item.videoShow !== true}}" class="video_play_box" catchtap="catchPlay" data-id="{{item.id}}">
+              <view class="video_play_icon" catchtap="catchPlay" data-id="{{item.id}}"></view>
+            </view>
+            <video class="component_viewer_video" wx:if="{{item.type === 'video' && item.videoShow === true}}" src="{{item.src}}" catchtap="catchEvent"></video>
           </swiper-item>
         </block>
       </swiper>

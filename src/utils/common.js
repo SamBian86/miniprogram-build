@@ -19,6 +19,9 @@ module.exports = {
   showToast: function(obj) {
     return wx.p.showToast(obj)
   },
+  showModel: function(obj) {
+    return wx.p.showModel(obj)
+  },
   hideToast: function(obj) {
     return wx.p.hideToast(obj)
   },

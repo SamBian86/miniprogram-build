@@ -1,7 +1,8 @@
 // components/component-photo/photo.js
 const photoBehavior = require('../../behaviors/photoBehavior')
+const commonBehavior = require('../../behaviors/commonBehavior')
 Component({
-  behaviors: [photoBehavior],
+  behaviors: [commonBehavior, photoBehavior],
   options: {
     multipleSlots: true // 在组件定义时的选项中启用多slot支持
   },
@@ -34,25 +35,33 @@ Component({
       camera.openPanel()
     },
     removePhoto: function(e) {
-      const photoIndex = this.getCurrentTarget(e, 'dataset')['photoIndex']
-      const name = this.getCurrentTarget(e, 'dataset')['name']
-      const photoName = this.getCurrentTarget(e, 'dataset')['photoName']
-      const event = {
-        detail: {
-          tempFilePaths: '',
-          target: {
-            dataset: {
-              name: name,
-              photoName: photoName
+      const that = this
+      this.showModal({
+        content: '确定要删除?'
+      }).then(res => {
+        if (!res.confirm) {
+          return false
+        }
+        const photoIndex = that.getCurrentTarget(e, 'dataset')['photoIndex']
+        const name = that.getCurrentTarget(e, 'dataset')['name']
+        const photoName = that.getCurrentTarget(e, 'dataset')['photoName']
+        const event = {
+          detail: {
+            tempFilePaths: '',
+            target: {
+              dataset: {
+                name: name,
+                photoName: photoName
+              }
             }
           }
         }
-      }
-      this.setData({
-        photoType: 'remove',
-        photoIndex: photoIndex
+        that.setData({
+          photoType: 'remove',
+          photoIndex: photoIndex
+        })
+        that.cameraEvent(event)
       })
-      this.cameraEvent(event)
     },
     cameraEvent: function(e) {
       // console.log(e)

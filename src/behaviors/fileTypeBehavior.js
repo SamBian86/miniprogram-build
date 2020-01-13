@@ -54,6 +54,7 @@ module.exports = Behavior({
     openPhoto: function() {
       this.closePanel()
       this.chooseImage({
+        count: 1,
         sizeType: ['original', 'compressed'],
         sourceType: ['album', 'camera']
       }).then(res => {

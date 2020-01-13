@@ -1,11 +1,13 @@
 // components/component-file/file.js
 const fileBehavior = require('../../behaviors/fileBehavior')
+const commonBehavior = require('../../behaviors/commonBehavior')
 Component({
-  behaviors: [fileBehavior],
+  behaviors: [commonBehavior, fileBehavior],
   options: {
     multipleSlots: true // 在组件定义时的选项中启用多slot支持
   },
   data: {
+    filelists: [],
     actionType: '',
     actionIndex: ''
   },
@@ -34,25 +36,37 @@ Component({
       type.openPanel()
     },
     removeFile: function(e) {
-      const actionIndex = this.getCurrentTarget(e, 'dataset')['actionIndex']
-      const name = this.getCurrentTarget(e, 'dataset')['name']
-      const fileName = this.getCurrentTarget(e, 'dataset')['fileName']
-      const event = {
-        detail: {
-          tempFilePaths: '',
-          target: {
-            dataset: {
-              name: name,
-              fileName: fileName
+      const that = this
+      this.showModal({
+        content: '确定要删除?'
+      }).then(res => {
+        if (!res.confirm) {
+          return false
+        }
+        const actionIndex = that.getCurrentTarget(e, 'dataset')['actionIndex']
+        const name = that.getCurrentTarget(e, 'dataset')['name']
+        const fileName = that.getCurrentTarget(e, 'dataset')['fileName']
+        const currentFileType = that.getCurrentTarget(e, 'dataset')[
+          'currentFileType'
+        ]
+        const event = {
+          detail: {
+            tempFilePaths: '',
+            currentFileType,
+            target: {
+              dataset: {
+                name: name,
+                fileName: fileName
+              }
             }
           }
         }
-      }
-      this.setData({
-        actionType: 'remove',
-        actionIndex: actionIndex
+        that.setData({
+          actionType: 'remove',
+          actionIndex: actionIndex
+        })
+        that.fileTypeEvent(event)
       })
-      this.fileTypeEvent(event)
     },
     fileTypeEvent: function(e) {
       const fileType = this.getEventDetail(e)['currentFileType']
@@ -77,6 +91,7 @@ Component({
             fileType,
             url: tempFilePaths
           })
+          e.actionType = 'add'
         }
       }
       if (actionType === 'change') {
@@ -84,6 +99,8 @@ Component({
           fileType,
           url: tempFilePaths
         })
+        e.actionType = 'change'
+        e.actionIndex = actionIndex
       }
       if (actionType === 'remove') {
         filelists.splice(actionIndex, 1)
@@ -92,7 +109,6 @@ Component({
       }
       e.value = filelists
       e.fileType = fileType
-
       this.setData(
         {
           filelists: filelists

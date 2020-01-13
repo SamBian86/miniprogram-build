@@ -65,6 +65,18 @@ module.exports = Behavior({
         })
       }
     },
-    catchEvent() {}
+    catchEvent() {},
+    catchPlay(e) {
+      const { items } = this.data
+      const id = this.getCurrentTarget(e, 'dataset')['id']
+      items.forEach(item => {
+        if (item.id === id && item.type === 'video') {
+          item.videoShow = true
+        }
+      })
+      this.setData({
+        items
+      })
+    }
   }
 })

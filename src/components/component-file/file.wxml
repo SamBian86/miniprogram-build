@@ -1,11 +1,11 @@
 <!-- components/component-file/file.wxml -->
 <view class="component_file_container">
-  <view wx:for="{{items}}" data-name="{{dName}}" data-file-name="filesString" wx:key="index" data-action-type="change" data-action-index="{{index}}" class="component_file{{(index + 1) % 3 === 0 ? ' component_file_hack' : ''}}" bindtap="changeFile" bindlongpress="removeFile">
+  <view wx:for="{{items}}" data-name="{{dName}}" data-file-name="filesString" data-current-file-type="{{item.fileType}}" wx:key="index" data-action-type="change" data-action-index="{{index}}" class="component_file{{(index + 1) % 3 === 0 ? ' component_file_hack' : ''}}" bindtap="changeFile" bindlongpress="removeFile">
     <!-- <image class="component_file_style" mode="aspectFill" src="{{item[imgKey]}}" /> -->
     <image wx:if="{{item.fileType === 1}}" class="component_file_style" mode="aspectFill" src="{{item[imgKey]}}" />
     <image wx:if="{{item.fileType === 2}}" class="component_file_style" mode="aspectFill" src="{{videoImage}}{{item.id}}" />
   </view>
-  <view wx:if="{{max > items.length}}" class="component_file component_file_add{{items.length % 3 === 2 ? ' component_file_hack' : ''}}" data-action-type="add" bindtap="takeFile">
+  <view wx:if="{{max > filelists.length}}" class="component_file component_file_add{{filelists.length % 3 === 2 ? ' component_file_hack' : ''}}" data-action-type="add" bindtap="takeFile">
     <view class="component_file_add_before"></view>
     <view class="component_file_add_after"></view>
   </view>
