@@ -24,6 +24,7 @@ module.exports = {
   formatData: function(lists) {
     return lists
   },
+  searchTimer: null,
   // 页面相关事件处理函数--监听用户下拉动作
   onPullDownRefresh: function() {
     const loading = this.data.pullStatus.loading
@@ -117,7 +118,7 @@ module.exports = {
             //   icon: 'none',
             //   duration: 1000
             // })
-            this.makeTokenExpire()
+            // this.makeOpenIdExpire()
           })
       }
     )
@@ -169,7 +170,7 @@ module.exports = {
             //   icon: 'none',
             //   duration: 1000
             // })
-            this.makeTokenExpire()
+            // this.makeOpenIdExpire()
           })
       }
     )

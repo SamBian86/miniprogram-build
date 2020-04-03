@@ -2,6 +2,7 @@
 <view class="component_list_container" data-url="{{url}}" bindtap="tapEvent">
   <slot name="prepend"></slot>
   <view class="component_list{{noMar !== false ? ' component_list_noMar': ''}}{{noPad !== false ? ' component_list_noPad': ''}}{{noBord !== false ? ' component_list_noBord': ''}}{{last === false ? '': ' component_list_last'}}" style="{{cssStyle}}">
+    <slot name="must"></slot>
     <text wx:if="{{title !== ''}}" class="component_list_text">{{title}}</text>
     <slot></slot>
     <slot name="append"></slot>

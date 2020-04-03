@@ -42,9 +42,19 @@ module.exports = {
       this.getEventDetail(this.getEventDetail(e))['value']
     )
     const key = 'form.' + name
-    this.setData({
-      [key]: value
-    })
+    this.setData(
+      {
+        [key]: value
+      },
+      () => {
+        if (this.afterKeyInput) {
+          this.afterKeyInput({
+            key: name,
+            value: value
+          })
+        }
+      }
+    )
   },
   // 父组件input-number事件接收数据
   keyInputNumber: function(e) {
@@ -114,13 +124,14 @@ module.exports = {
       'range'
     ]
     const pickItem = range.filter((item, index) => {
-      return index === value
+      return index.toString() === value
     })
     const valueKey = this.getCurrentTarget(this.getEventDetail(e), 'dataset')[
       'valueKey'
     ]
     const key = 'form.' + name
     const keyIndex = 'form.' + name + 'Index'
+    // debugger
     if (pickItem.length === 1) {
       this.setData(
         {
@@ -130,6 +141,7 @@ module.exports = {
         () => {
           if (this.afterPickerSelectorChange) {
             this.afterPickerSelectorChange({
+              key: name,
               selected: pickItem[0]
             })
           }

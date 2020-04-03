@@ -73,6 +73,9 @@ module.exports = {
   login: function(obj) {
     return wx.p.login(obj)
   },
+  checkSession: function(obj) {
+    return wx.p.checkSession(obj)
+  },
   uploadFile: function(obj) {
     return wx.p.uploadFile(obj)
   },
@@ -137,45 +140,17 @@ module.exports = {
   },
   initAuth: function() {
     try {
-      const token = this.getStorageSync('token')
-      if (!token) {
-        this.setStorageSync('token', '')
+      const openid = this.getStorageSync('openid')
+      if (!openid) {
+        this.setStorageSync('openid', '')
         this.setStorageSync('userInfo', '')
-        this.setStorageSync('version', '')
-        this.setStorageSync('platform-type', '')
-        this.setStorageSync('app-version', '')
-        this.setStorageSync('api-version', '')
-      }
-    } catch (e) {}
-    try {
-      const version = this.getStorageSync('version')
-      if (!version) {
-        this.setStorageSync('version', config.version)
-      }
-    } catch (e) {}
-    try {
-      const platformType = this.getStorageSync('platform-type')
-      if (!platformType) {
-        this.setStorageSync('platform-type', config.platformType)
-      }
-    } catch (e) {}
-    try {
-      const appVersion = this.getStorageSync('app-version')
-      if (!appVersion) {
-        this.setStorageSync('app-version', config.appVersion)
-      }
-    } catch (e) {}
-    try {
-      const apiVersion = this.getStorageSync('api-version')
-      if (!apiVersion) {
-        this.setStorageSync('api-version', config.apiVersion)
       }
     } catch (e) {}
   },
   checkUserInfo: function() {
     try {
-      const token = this.getStorageSync('token')
-      if (token) {
+      const openid = this.getStorageSync('openid')
+      if (openid) {
         return this.getStorageSync('userInfo')
       } else {
         return false
@@ -183,56 +158,15 @@ module.exports = {
     } catch (e) {}
   },
   getHeader: function() {
-    let token = '',
-      version = '',
-      platformType = '',
-      appVersion = '',
-      apiVersion = ''
-
-    return this.getStorage({
-      key: 'token'
+    let openid = this.getStorageSync('openid') || ''
+    return Promise.resolve({
+      openid
     })
-      .then(res => {
-        // console.log('token success')
-        token = res.data
-        return this.getStorage({ key: 'version' })
-      })
-      .then(res => {
-        // console.log('version success')
-        version = res.data
-        return this.getStorage({ key: 'platform-type' })
-      })
-      .then(res => {
-        // console.log('platformType success')
-        platformType = res.data
-        return this.getStorage({ key: 'app-version' })
-      })
-      .then(res => {
-        // console.log('appVersion success')
-        appVersion = res.data
-        return this.getStorage({ key: 'api-version' })
-      })
-      .then(res => {
-        // console.log('apiVersion success')
-        apiVersion = res.data
-        return Promise.resolve({
-          token,
-          version,
-          'platform-type': platformType,
-          'app-version': appVersion,
-          'api-version': apiVersion
-        })
-      })
   },
-  makeTokenExpire() {
-    this.setStorageSync('token', '')
-    this.setStorageSync('userInfo', '')
-    this.setStorageSync('version', config.version)
-    this.setStorageSync('platform-type', config.platformType)
-    this.setStorageSync('app-version', config.appVersion)
-    this.setStorageSync('api-version', config.apiVersion)
-    this.setStorageSync('wechatUserInfo', '')
+  makeOpenIdExpire() {
     this.setStorageSync('openid', '')
+    this.setStorageSync('userInfo', '')
+    this.setStorageSync('wechatUserInfo', '')
   },
   httpGet: function(obj) {
     let header = {}

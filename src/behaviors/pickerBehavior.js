@@ -35,6 +35,10 @@ module.exports = Behavior({
       type: String,
       value: 'name'
     },
+    arrow: {
+      type: Boolean,
+      value: false
+    },
     range: {
       type: Array,
       value: []

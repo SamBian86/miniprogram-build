@@ -85,5 +85,51 @@ module.exports = {
       sex,
       sexName
     }
+  },
+  getCalendarDataByDay(d) {
+    let date = this.getDate(d)
+    let oneDay = 1000 * 60 * 60 * 24
+    let calendarData = []
+    date.setDate(1)
+    while (date.getDay() !== 0) {
+      date.setTime(date.getTime() - oneDay)
+      calendarData.unshift(
+        this.getCalendarDataOneDay(this.dateFormat('yyyy-MM-dd', date), 'prev')
+      )
+    }
+
+    date = this.getDate(d)
+    date.setDate(1)
+    do {
+      calendarData.push(
+        this.getCalendarDataOneDay(
+          this.dateFormat('yyyy-MM-dd', date),
+          'current'
+        )
+      )
+      date.setTime(date.getTime() + oneDay)
+    } while (date.getDate() !== 1)
+
+    date.setTime(date.getTime() - oneDay)
+    while (date.getDay() !== 6) {
+      date.setTime(date.getTime() + oneDay)
+      calendarData.push(
+        this.getCalendarDataOneDay(this.dateFormat('yyyy-MM-dd', date), 'next')
+      )
+    }
+    // console.log(calendarData)
+    return calendarData
+  },
+  getCalendarDataOneDay(d, tag) {
+    let date = this.getDate(d)
+    return {
+      date: d,
+      day: date.getDate(),
+      week: date.getDay(),
+      tag
+    }
+  },
+  getDate(d) {
+    return new Date(d.replace(/-/g, '/'))
   }
 }

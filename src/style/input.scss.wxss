@@ -28,7 +28,7 @@
 .component_input {
   flex: 1;
   color: #000;
-  font-size: 32rpx;
+  font-size: 30rpx;
 }
 
 .component_input_right {

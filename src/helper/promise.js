@@ -6,6 +6,7 @@ const wxApiName = [
   'getUserInfo',
   'request',
   'login',
+  'checkSession',
   'uploadFile',
   'getSystemInfo',
   'showToast',

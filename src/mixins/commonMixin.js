@@ -11,43 +11,17 @@ const commonMixin = {
     apiVersion: app.globalData.config.apiVersion
   },
   onLoad: function(options) {
+    const userInfo = this.getStorageSync('userInfo') || ''
+    const wechatUserInfo = this.getStorageSync('wechatUserInfo') || ''
+    const openid = this.getStorageSync('openid') || ''
     this.getSystemInfo().then(res => {
       const { platform } = res
       this.setData({
-        platform
+        platform,
+        userInfo,
+        wechatUserInfo,
+        openid
       })
-    })
-    this.getStorage({
-      key: 'token',
-      complete: result => {
-        this.setData({
-          token: result && result.data ? result.data : ''
-        })
-      }
-    })
-    this.getStorage({
-      key: 'userInfo',
-      complete: result => {
-        this.setData({
-          userInfo: result && result.data ? result.data : ''
-        })
-      }
-    })
-    this.getStorage({
-      key: 'wechatUserInfo',
-      complete: result => {
-        this.setData({
-          wechatUserInfo: result && result.data ? result.data : ''
-        })
-      }
-    })
-    this.getStorage({
-      key: 'openid',
-      complete: result => {
-        this.setData({
-          openid: result && result.data ? result.data : ''
-        })
-      }
     })
     console.log('commonMixin onLoad ')
   },
@@ -67,14 +41,14 @@ const commonMixin = {
   setHeaderRed: function() {
     // 设置背景色
     this.setBackgroundColor({
-      backgroundColor: '#20DCCF',
-      backgroundColorTop: '#20DCCF',
+      backgroundColor: '#459bfb',
+      backgroundColorTop: '#459bfb',
       backgroundColorBottom: '#ffffff'
     })
     // 设置导航栏颜色
     this.setNavigationBarColor({
       frontColor: '#ffffff',
-      backgroundColor: '#20DCCF'
+      backgroundColor: '#459bfb'
     })
   },
   simulateAjax: function(type, data) {

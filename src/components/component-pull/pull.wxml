@@ -9,7 +9,7 @@
     <text class="component_pull_empty_text">{{emptyText}}</text>
   </view>
   <view wx:if="{{!pullStatus.empty && pullStatus.init && pullStatus.finish}}" class="component_pull_finish">
-    {{finishText}}
+    {{pullStatus.finishText === undefined ? finishText : pullStatus.finishText}}
   </view>
   <view wx:if="{{!pullStatus.empty && pullStatus.init && !pullStatus.finish}}" class="component_pull_more">
     {{moreText}}

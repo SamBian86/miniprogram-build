@@ -9,8 +9,9 @@
   padding: 25rpx 30rpx 25rpx 0rpx;
   border-bottom: 1px solid #f1f1f1;
   justify-content: flex-start;
-  align-items: center;
+  /* align-items: center; */
   margin-left: 30rpx;
+  align-items: center;
 }
 
 .component_list_noMar {
@@ -35,7 +36,7 @@
   flex: 1;
   color: #666;
   min-width: 100rpx;
-  font-size: 36rpx;
+  font-size: 32rpx;
 }
 
 .component_list_arrow {
