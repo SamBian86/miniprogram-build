@@ -4,11 +4,7 @@ const commonMixin = {
   data: {
     host: app.globalData.config.host,
     api: app.globalData.config.api,
-    version: app.globalData.config.version,
-    platformType: app.globalData.config.platformType,
-    appName: app.globalData.config.appName,
-    appVersion: app.globalData.config.appVersion,
-    apiVersion: app.globalData.config.apiVersion
+    appName: app.globalData.config.appName
   },
   onLoad: function(options) {
     const userInfo = this.getStorageSync('userInfo') || ''
