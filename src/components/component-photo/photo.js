@@ -78,6 +78,8 @@ Component({
             id: 10,
             url: tempFilePaths[0]
           })
+          e.photoType = 'add'
+          e.photoIndex = photolists.length - 1
         }
       }
       if (photoType === 'change') {
@@ -85,6 +87,8 @@ Component({
           id: 10,
           url: tempFilePaths[0]
         })
+        e.photoType = 'change'
+        e.photoIndex = photoIndex
       }
       if (photoType === 'remove') {
         photolists.splice(photoIndex, 1)

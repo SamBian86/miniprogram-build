@@ -15,6 +15,7 @@ module.exports = Behavior({
       this.endPageX = touches['pageX']
       this.endPageY = touches['pageY']
       const moveY = Math.abs(this.endPageY - this.startPageY)
+      const moveX = Math.abs(this.endPageX - this.startPageX)
       // console.log(this.endPageX - this.startPageX)
       // console.log(moveY)
       if (this.endPageX - this.startPageX > 100 && moveY < 50) {
@@ -26,6 +27,18 @@ module.exports = Behavior({
       if (this.endPageX - this.startPageX < -100 && moveY < 50) {
         this.triggerEvent('touchlisten', {
           horizontal: 'left'
+        })
+      }
+
+      if (this.endPageY - this.startPageY > 30 && moveX < 50) {
+        this.triggerEvent('touchlisten', {
+          vertical: 'down'
+        })
+      }
+
+      if (this.endPageY - this.startPageY < -30 && moveX < 50) {
+        this.triggerEvent('touchlisten', {
+          vertical: 'up'
         })
       }
     }

@@ -30,6 +30,11 @@ module.exports = Behavior({
         key: key,
         value: value
       })
+    },
+    setPhotos(photolists) {
+      this.setData({
+        photolists
+      })
     }
   }
 })

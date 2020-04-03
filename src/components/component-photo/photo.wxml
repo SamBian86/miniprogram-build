@@ -1,6 +1,6 @@
 <!-- components/component-photo/photo.wxml -->
 <view class="component_photo_container">
-  <view wx:for="{{photolists}}" data-name="{{dName}}" data-photo-name="photosString" wx:key="index" data-photo-type="change" data-photo-index="{{index}}" class="component_photo{{(index + 1) % 5 === 0 ? ' component_photo_hack' : ''}}" bindtap="changePhoto" bindlongpress="removePhoto">
+  <view wx:for="{{photolists}}" data-name="{{dName}}" data-photo-name="{{dName}}String" wx:key="index" data-photo-type="change" data-photo-index="{{index}}" class="component_photo{{(index + 1) % 5 === 0 ? ' component_photo_hack' : ''}}" bindtap="changePhoto" bindlongpress="removePhoto">
     <image class="component_photo_style" mode="aspectFill" src="{{item[imgKey]}}" />
   </view>
   <view wx:if="{{max > photolists.length}}" class="component_photo component_photo_add{{photolists.length % 5 === 4 ? ' component_photo_hack' : ''}}" data-photo-type="add" bindtap="takePhoto">

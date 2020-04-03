@@ -1,6 +1,6 @@
 <!-- components/component-button/button.wxml -->
 <block wx:if="{{type === 'code'}}">
-  <view bindtap="getCode" class="component_button_container component_button_code {{timing === true ? 'component_button_timing': ''}}">
+  <view bindtap="getCode" class="component_button_container component_button_code {{timing === true ? 'component_button_timing': ''}}" style="{{cssStyle}}">
     {{ timing ? timingText : normalText }}
   </view>
 </block>
