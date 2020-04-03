@@ -8,6 +8,10 @@
   height: 50rpx;
 }
 
+.component_picker_input {
+  color: #000;
+}
+
 .component_picker_input_empty {
   color: #999;
   padding: 0rpx 0rpx 0rpx 10rpx;
@@ -23,7 +27,6 @@
 }
 
 .component_picker_select_text {
-  /* padding: 0rpx 10rpx; */
   padding: 0rpx 0rpx 0rpx 10rpx;
   min-width: 150rpx;
   text-align: right;
