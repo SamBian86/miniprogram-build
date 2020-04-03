@@ -34,6 +34,9 @@ module.exports = {
   hideLoading: function(obj) {
     return wx.showLoading(obj)
   },
+  redirectTo: function(obj) {
+    return wx.p.redirectTo(obj)
+  },
   navigateTo: function(obj) {
     return wx.p.navigateTo(obj)
   },
@@ -78,6 +81,15 @@ module.exports = {
   },
   uploadFile: function(obj) {
     return wx.p.uploadFile(obj)
+  },
+  downloadFile: function(obj) {
+    return wx.p.downloadFile(obj)
+  },
+  openDocument: function(obj) {
+    return wx.p.openDocument(obj)
+  },
+  setClipboardData: function(obj) {
+    return wx.p.setClipboardData(obj)
   },
   setStorage: function(obj) {
     return wx.p.setStorage(obj)
