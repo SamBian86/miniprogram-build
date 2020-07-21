@@ -7,11 +7,11 @@ const taskPath = 'workflow/task'
 console.log(`plugins:`, common.plugins)
 
 fs.readdirSync(taskPath)
-  .filter(function(file) {
+  .filter(function (file) {
     // 只处理js文件
     return file.match(/js$/)
   })
-  .forEach(function(_file, index, arr) {
+  .forEach(function (_file, index, arr) {
     // common.utils.console.warning(`./${taskPath}/${_file}`)
     require('./' + taskPath + '/' + _file)(gulp, common)
   })
@@ -29,6 +29,7 @@ task(
       'json',
       'style:dev',
       'script',
+      'wxs',
       'finish:dev'
     ),
     parallel(
@@ -38,7 +39,8 @@ task(
       'templete:watch',
       'json:watch',
       'style:watch',
-      'script:watch'
+      'script:watch',
+      'wxs:watch'
     )
   )
 )
@@ -55,6 +57,7 @@ task(
     'json',
     'style:build',
     'script',
+    'wxs',
     'finish:build'
   )
 )

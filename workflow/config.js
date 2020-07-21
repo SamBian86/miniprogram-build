@@ -7,6 +7,7 @@ const commonConfig = {
   json: './src/**/*.json', // json文件
   style: './src/**/*.wxss', // 样式文件
   script: './src/**/*.js', // javscript文件
+  wxs: './src/**/*.wxs', // wxs文件
   image: './src/**/*.{png,jpg,svg,gif}'
 }
 
@@ -22,7 +23,7 @@ const dingTalkConfig = {}
 const alipayConfig = {}
 
 const mergeObj = [commonConfig, wechatConfig, alipayConfig]
-mergeObj.map(item => {
+mergeObj.map((item) => {
   Object.assign(item, commonConfig)
 })
 
