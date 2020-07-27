@@ -29,7 +29,7 @@ task(
       'json',
       'style:dev',
       'script',
-      'wxs',
+      'sss',
       'finish:dev'
     ),
     parallel(
@@ -40,7 +40,7 @@ task(
       'json:watch',
       'style:watch',
       'script:watch',
-      'wxs:watch'
+      'sss:watch'
     )
   )
 )
@@ -57,7 +57,7 @@ task(
     'json',
     'style:build',
     'script',
-    'wxs',
+    'sss',
     'finish:build'
   )
 )
